@@ -4,6 +4,11 @@ import time
 import configparser
 import json
 
+with open('/data/options.json') as jf:
+    jdata=json.load(jf)
+
+test1=jdata['ip-address']
+test2=jdata['port']
 
 clientname = "PythonTest"
 hostname = '192.168.1.196'
@@ -32,7 +37,7 @@ zahl=0
 while True:
 
     topic = "SW1_KUECHE"
-    data = "hello"+str(zahl)
+    data = "hello"+str(zahl)+test1+test2
     client.publish(topic, json.dumps(data))
     zahl=zahl+1
     time.sleep(10)
