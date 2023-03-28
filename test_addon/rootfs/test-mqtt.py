@@ -11,7 +11,7 @@ test1=jdata['ip-address']
 test2=jdata['port']
 
 clientname = "PythonTest"
-hostname = '192.168.1.196'
+hostname = test1
 port = 1883
 timeout = 60
 
