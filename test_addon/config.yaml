@@ -1,6 +1,6 @@
 name: "Hello world"
 description: "My first real add-on!"
-version: "1.0.3"
+version: "1.0.4"
 slug: "hello_world"
 init: false
 arch:
@@ -14,6 +14,6 @@ options:
   port: 1883
   client_name: 'Test Client'
 schema:
-  ip-address: url
+  ip-address: str
   port: port
   client_name: str
