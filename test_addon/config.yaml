@@ -9,3 +9,11 @@ arch:
   - armhf
   - armv7
   - i386
+options:
+  ip-address: 192.168.3.227
+  port: 1883
+  client_name: 'Test Client'
+schema:
+  ip-address: url
+  port: port
+  client_name: str
