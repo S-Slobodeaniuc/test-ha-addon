@@ -37,7 +37,7 @@ zahl=0
 while True:
 
     topic = "SW1_KUECHE"
-    data = "hello"+str(zahl)+str(test1)+str(test2)
+    data = "hello"+str(zahl)+" | "+str(test1)+" | "+str(test2)
     client.publish(topic, json.dumps(data))
     zahl=zahl+1
     time.sleep(10)
