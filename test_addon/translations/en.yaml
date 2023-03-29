@@ -1,0 +1,7 @@
+configuration:
+  ip-address:
+    name: MQTT Broker IP-Address
+    description: blab bla
+  port:
+    name: Port
+    description: bbbbb
