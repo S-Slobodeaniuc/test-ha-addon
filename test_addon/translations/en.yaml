@@ -5,3 +5,6 @@ configuration:
   port:
     name: Port
     description: bbbbb
+  client_name:
+    name: Client Name
+    description: gkgkgkgkg
