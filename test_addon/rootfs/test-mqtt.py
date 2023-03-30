@@ -33,7 +33,26 @@ client.connect(hostname, port, timeout)
 
 client.loop_start()
 
+topicT ="homeassistant/sensor/addontest/config" 
+payloadT ={"unique_id":"addontest",
+	"device_class": "temperature",
+	"name": "addontest",
+	"state_topic": "homeassistant/sensor/addontest/state",
+	"unit_of_measurement": "'C",
+	"icon":"mdi:lamp",
+	"value_template":"{{value_json.temperature}}",
+	"device": {
+	    "identifiers": ["Identifiers Hagronic"],
+	    "name": "Hagronic",
+	    "sw_version": "Version 2.01",
+	    "model": "PIC32",
+	    "manufacturer": "Hagronic"
+	  }
+	}  
+
 zahl=0
+
+client.publish(topicT,json.dumps(payloadT))
 
 while True:
 
@@ -41,4 +60,10 @@ while True:
     data = "hello"+str(zahl)+" | "+str(test1)+" | "+str(test2)
     client.publish(topic, json.dumps(data))
     zahl=zahl+1
+    
+    topicA = "homeassistant/sensor/addontest/state"
+    dataA = {'temperature': zahl}
+    client.publish(topicA,json.dumps(dataA))
+    
+    
     time.sleep(10)
