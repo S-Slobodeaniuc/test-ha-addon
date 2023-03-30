@@ -9,10 +9,11 @@ with open('/data/options.json') as jf:
 
 test1=jdata['ip-address']
 test2=jdata['port']
+test3=jdata['client_name']
 
-clientname = "PythonTest"
+clientname = test3
 hostname = test1
-port = 1883
+port = test2
 timeout = 60
 
 # callback for CONNACK response from the server.
