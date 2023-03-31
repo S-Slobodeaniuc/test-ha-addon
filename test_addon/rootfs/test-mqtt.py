@@ -91,8 +91,9 @@ while True:
     dataA = {'temperature': zahl}
     client.publish(topicA,json.dumps(dataA))
 	
-	topicTRS = "homeassistant/switch/kueche/licht_tisch/state"
+	topicTRS ="homeassistant/switch/kueche/licht_tisch/state"
 	dataTRS=state
+	client.publish(topicTRS,json.dumps(dataTRS))
 	if state=="OFF":
 		state="ON"
 	else:
