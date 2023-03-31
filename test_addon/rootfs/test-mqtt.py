@@ -61,9 +61,9 @@ payloadTasterRelais={
 	"payload_off":"OFF",
 	"state_on":"ON",
 	"state_off":"OFF",
-	"optimistic":false,
+	"optimistic": False,
 	"qos":0,
-	"ratein":true,
+	"ratein": True,
 		"device": {
 	    "identifiers": ["Identifiers Hagronic"],
 	    "name": "Hagronic",
