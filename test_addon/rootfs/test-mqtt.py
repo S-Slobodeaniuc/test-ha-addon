@@ -51,7 +51,7 @@ payloadT ={"unique_id":"addontest",
 	}  
 
 
-topicTasterRelais="homeassistnant/switch/kueche/licht_tisch/config"
+topicTasterRelais="homeassistant/switch/kueche/licht_tisch/config"
 payloadTasterRelais={
 	"unique_id":"licht_tisch",
 	"name":"Licht Tisch",
