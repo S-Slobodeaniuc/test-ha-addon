@@ -78,6 +78,8 @@ zahl=0
 client.publish(topicT,json.dumps(payloadT))
 client.publish(topicTasterRelais,json.dumps(payloadTasterRelais))
 
+state="OFF"
+
 while True:
 
     topic = "SW1_KUECHE"
@@ -88,6 +90,12 @@ while True:
     topicA = "homeassistant/sensor/addontest/state"
     dataA = {'temperature': zahl}
     client.publish(topicA,json.dumps(dataA))
-    
+	
+	topicTRS = "homeassistant/switch/kueche/licht_tisch/state"
+	dataTRS=state
+	if state=="OFF":
+		state="ON"
+	else:
+		state="OFF"
     
     time.sleep(10)
