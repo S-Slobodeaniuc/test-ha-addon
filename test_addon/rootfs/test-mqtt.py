@@ -50,9 +50,33 @@ payloadT ={"unique_id":"addontest",
 	  }
 	}  
 
+
+topicTasterRelais="homeassistnant/switch/kueche/licht_tisch/config"
+payloadTasterRelais={
+	"unique_id":"licht_tisch",
+	"name":"Licht Tisch",
+	"state_topic":"homeassistant/switch/kueche/licht_tisch/state",
+	"command_topic":"homeassistant/switch/kueche/licht_tisch/set",
+	"payload_on":"ON",
+	"payload_off":"OFF",
+	"state_on":"ON",
+	"state_off":"OFF",
+	"optimistic":false,
+	"qos":0,
+	"ratein":true,
+		"device": {
+	    "identifiers": ["Identifiers Hagronic"],
+	    "name": "Hagronic",
+	    "sw_version": "Version 2.01",
+	    "model": "PIC32",
+	    "manufacturer": "Hagronic"
+	  }
+}
+
 zahl=0
 
 client.publish(topicT,json.dumps(payloadT))
+client.publish(topicTasterRelais,json.dumps(payloadTasterRelais))
 
 while True:
 
